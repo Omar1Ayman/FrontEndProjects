@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/all.css">
+
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/master.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="page d-flex">
+
+        <!-- Sidebar -->
+        <div class="aside bg-white p-20">
+            <h3 class="f-20 heading-title text-center logo p-rel pb-20">Elbasuony</h3>
+            <h2 class="d-none text-center logo1 mt-20">EL</h2>
+            <ul class="links">
+                <li ><a class="active" href="index.html"><i class="fa-solid fa-house fa-fw"></i><span>Dashboard</span></a></li>
+                <li ><a href="settings.html"><i class="fa-solid fa-gear fa-fw"></i><span>Settings</span></a></li>
+                <li><a href="profile.html"><i class="fa-solid fa-user fa-fw"></i><span>Profile</span></a></li>
+                <li><a href="project.html"><i class="fa-solid fa-diagram-project fa-fw"></i><span>Projects</span></a></li>
+                <li><a href="courses.html"><i class="fa-solid fa-graduation-cap fa-fw"></i><span>Courses</span></a></li>
+                <li><a href="friends.html"><i class="fa-solid fa-circle-user fa-fw"></i><span>Friends</span></a></li>
+                <li><a href="files.html"><i class="fa-solid fa-file fa-fw"></i><span>Files</span></a></li>
+                <li><a href="plans.html"><i class="fa-solid fa-book fa-fw"></i><span>Plans</span></a></li>
+            </ul>
+        </div>
+        <!-- Sidebar -->
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Header -->
+            <header class="d-flex j-c-space p-20 bg-white">
+                <div class="search p-rel">
+                    <input type="search" name="" id="" placeholder="Type A Keyword">
+                    <i class="icon-search p-abs fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="navigation">
+                    <i class="bell p-rel fa-regular fa-bell"></i>
+                    <img src="images/avatar.png" alt="">
+                </div>
+            </header>
+            <!-- Header -->
+
+            <!-- Container -->
+            <div class="container p-20">
+                <h2 class="title p-rel pb-10">Dashboard</h2>
+                <br>
+                <div class="row d-grid gap-20">
+
+                    <div class="card welcome rad-5 text-mob-center block-mob">
+                        <div class="intro p-20 rad-5 d-flex p-rel j-c-space bg-eee">
+                            <div class="">
+                                <h2 class="m-0">Welcome</h2>
+                                <p class="c-gray mt-5">
+                                    Elbasuony
+                                </p>
+                            </div>
+                            <img src="images/welcome.png" alt="">
+                            <img src="images/avatar.png" class="p-abs user-avatar" alt="">
+
+                        </div>
+                        <div class="body text-center d-flex j-c-space p-20 mt-20 mb-20 block-mob">
+                            <div>Omar Ayman<span class="d-block c-gray fs-14 mt-10">Developer</span></div> 
+                            <div>80<span class="d-block c-gray fs-14 mt-10">Projects</span></div> 
+                            <div>$900000<span class="d-block c-gray fs-14 mt-10">Earned</span></div> 
+                        </div>
+                        <a href="profile.html" class="visit d-block fs-14 rad-5 bg-blue c-white w-fit btn-shape">Profile</a>
+                    </div>
+
+                    <div class="card draft rad-5 text-mob-center block-mob">
+                       <div class="intro p-20 rad-5">
+                        <h2 class="m-0">Quick Draft</h2>
+                        <p class="c-gray mt-5">Write A Draft For Your Ideas</p>
+                       </div>
+                       <div class="body p-20">
+                        <form action="">
+                            <input type="text" name="" id="">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                           </form>
+                           <button class="btn">Save</button>
+                       </div>
+                    </div>
+
+                    <div class="card targets rad-5 text-mob-center block-mob">
+                        <div class="intro p-20 rad-5">
+                         <h2 class="m-0">Yearly Targets</h2>
+                         <p class="c-gray mt-5">Targets Of The Year</p>
+                        </div>
+                        <div class="body p-20">
+                            <div class="child mb-20 d-flex align-center j-c-space">
+                                <div class="icon w-70 h-70 d-flex j-c-c align-center bg-ddd"><span>$</span></div>
+                                <div class="details">
+                                    <p class="c-gray">Money</p>
+                                    <p>$20.000</p>
+                                    <input type="range" class="w-full" name="" id="">
+                                </div>
+                            </div>
+
+                            <div class="child mb-20 d-flex align-center j-c-space">
+                                <div class="icon w-70 h-70 d-flex j-c-c align-center bg-ddd"><span> &lt;/&gt; </span></div>
+                                <div class="details">
+                                    <p class="c-gray">Projects</p>
+                                    <p>24</p>
+                                    <input type="range" class="w-full" name="" id="">
+                                </div>
+                            </div>
+
+                            <div class="child mb-20 d-flex align-center j-c-space">
+                                <div class="icon w-70 h-70 d-flex j-c-c align-center bg-ddd"><span><i class="fa-solid fa-user"></i></span></div>
+                                <div class="details">
+                                    <p class="c-gray">Team</p>
+                                    <p>12</p>
+                                    <input type="range" class="w-full" name="" id="">
+                                </div>
+                            </div>
+
+                        </div>
+                     </div>
+
+                   
+                </div>
+
+                
+
+             
+
+            </div>
+            <!-- Container -->
+            
+        </div>
+        <!-- Content -->
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

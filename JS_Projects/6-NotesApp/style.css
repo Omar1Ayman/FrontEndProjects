@@ -1,0 +1,133 @@
+body{
+    background-color: #88ABFF;
+}
+*{
+    padding: 0;
+    margin: 0;
+    perspective: 50px;
+    box-sizing: border-box;
+}
+#title{
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.add{
+    height: 250px;
+    width: 250px;
+    border-radius: 7px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 40px;
+}
+.add .circ{
+    height: 70px;
+    width: 70px;
+    border: 2px dashed #618cf8;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add .circ .plus{
+    font-size: 50px;
+    font-weight: bolder;
+    color: #618cf8;
+}
+.add p{
+    margin-top: 20px;
+    font-size: 25px;
+    color: #618cf8;
+}
+.container{
+    margin: 50px auto;
+    color: #000;
+    width: 25%;
+    transform: translateY(-50%);
+    display: none;
+    transition: all 1s ease-in-out;
+    /* transform: translate3D(0px , -50% , 5px); */
+}
+.container .wrapper{
+    width: 100%;
+    border-radius: 7px;
+    background-color: #fff;
+}
+.container .wrapper .head{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    padding: 20px;
+}
+.head p{
+    font-size: 25px;
+    color: rgb(58, 56, 56);
+}
+.head span{
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+}
+.container .wrapper form{
+    padding: 0 20px 20px ;
+    margin-top: 30px;
+}
+.container .wrapper form .group-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.group-form label{
+    font-size: 20px;
+    padding-bottom: 6px;
+}
+.group-form input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #ccc;
+    outline: none;
+
+}
+.group-form  div{
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+.group-form textarea{
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+    height: 150px;
+    width: 100%;
+    border: none;
+
+}
+.group-form textarea:focus , .group-form input:focus{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.11);
+}
+
+form button{
+    background: #618cf8;
+    width: 100%;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+
+}
+form button:hover{
+    background: #618cf8b4;
+}

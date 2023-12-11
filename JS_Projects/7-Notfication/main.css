@@ -1,0 +1,68 @@
+*{
+    perspective: 300px;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(166, 138, 192);
+
+}
+.container{
+    margin: 0 auto;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+
+
+}
+.container .add , .edit , .del{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    margin: 10px;
+}
+
+.edit {
+    background-color: violet;
+}
+.del {
+    background-color: rgb(235, 18, 18);
+}
+.add {
+    background-color: rgb(82, 137, 209);
+}
+
+.edit:hover {
+    background-color: violet;
+    opacity: .4;
+}
+
+.del:hover {
+    background-color: rgb(235, 18, 18);
+    opacity: .4;
+}
+
+.add:hover {
+    background-color: rgb(82, 137, 209);
+    opacity: .4;
+}
+
+.add_not{
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    color: #fff;
+    border-radius: 10px;
+    width: fit-content ;
+    text-align: center;
+
+
+}

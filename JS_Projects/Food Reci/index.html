@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+      img{
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+      }
+      #cont{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+      }
+      .search{
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 50px;
+      }
+      .search input , button{
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border: none;
+            border: 1px solid green;
+            font-weight: bold;
+
+        }
+        .search button{
+            cursor: pointer;
+            width: auto;
+            background-color: green;
+            color: #fff;
+            border-radius: 0px 50px 50px 0px;
+      }
+
+      input{
+        border-radius: 50px 0px 0px 50px;
+        text-align: center;
+      }
+
+
+      #res{
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+        gap: 15px 15px;
+      }
+      .card{
+        background-color: white;
+        border-radius: 10px;
+        border:1px solid #ddd;
+      }
+      .card .info{
+        padding: 0 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        
+      }
+      .info h3{
+        padding: 15px 0 5px 0;
+      }
+      .info .btn{
+        border-radius: 15px;
+        background-color: green;
+        color: #fff;
+        padding: 5px 10px;
+        font-weight: 500;
+        margin: 15px 0;
+      }
+    </style>
+</head>
+<body>
+
+   
+   <div id="cont">
+       <h1>Find your meail here</h1>
+         <div class="search">
+            <input type="text" id="s" placeholder="Type here...">
+            <button class="go" id="go">GO</button>
+         </div>   
+         <div id="res"></div>
+   </div>
+
+
+   <script>
+    
+      const btn = document.getElementById("go");
+      btn.addEventListener("click" , getmeals)
+
+      function getmeals(){
+        let rightsearch = document.getElementById("s").value.trim();
+        const url = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${rightsearch}`
+        fetch(url).then(res => res.json()).then(d => {
+            if(d.meals){
+                console.log(d.meals)
+                let html = ""
+                d.meals.forEach(meal => {
+                    html += `
+                        <div class="card">
+                        <img src="${meal.strMealThumb}" alt="">
+                        <div class="info">
+                            <h3>${meal.strMeal}</h3>
+                            <a class="btn">Get Recip</a>
+                        </div>
+                    </div>
+                    `
+                })
+
+                
+                document.getElementById("res").innerHTML = html
+            }else{
+                html = "Soory, we dont find your reslt"
+            }
+        })
+        }
+
+      
+   </script>
+</body>
+</html>

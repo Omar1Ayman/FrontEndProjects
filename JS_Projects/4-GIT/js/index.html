@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    
+
+   
+     <style>
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        ul li {
+            margin-left:10px ;
+            padding: 10px;
+            font-size: 25px;
+            cursor: pointer;
+
+            
+        }
+        
+        .content{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            
+            
+        }
+        .test{
+            width: 250px;
+            height: 250px;
+            background-color: rgb(219, 199, 199);
+            margin: 10px;
+
+        }
+
+        .form{
+            background-color: #ccc;
+            padding: 20px;
+            margin: auto;
+            text-align: center;
+            width: 80%;
+            border-radius:5px;
+        }
+        .form input[type='text']{
+            width: 90%;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 15px;
+        }
+        .form input[type='submit']{
+            width: 5%;
+            border: none;
+            border-radius: 4px;
+            padding: 10PX;
+            cursor: pointer;
+        }
+       .content{
+           background-color: #ccc;
+            padding: 20px;
+            margin: auto;
+            text-align: center;
+            width: 80%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            border-radius:5px;
+
+       }
+       .timer {
+           background-color: rgb(70, 49, 49);
+           height: auto;
+           width: 350px;
+           font-size: 30px;
+           font-weight: bolder;
+           font-family: Arial, Helvetica, sans-serif;
+           padding: 15px;
+           margin: auto;
+           color: antiquewhite;
+           text-align: center;
+           border-radius: 5px;
+       }
+       h1{
+           color:  rgb(57, 62, 92);
+       }
+
+       .parent{
+           background-color: black;
+           margin: 0 auto;
+           border-radius: 10px;
+           width: 400px;
+           padding: 10px;
+       }
+       .parent .c1 {
+            background-color:rgb(27, 26, 26);
+            display: flex;
+            justify-content: space-between;
+            padding: 3px;
+
+       }
+       input[type='text']{
+
+        background-color: rgb(236, 236, 236);
+        border: none;
+        width: 85%;
+        border-radius: 2px;
+       }
+       input[type='button']{
+           background-color:rgba(18, 141, 212, 0.801);
+           border: none;
+           width: 10%;
+           border-radius: 2px;
+
+       }
+    </style> 
+</head>
+<body style="height: 5000px;">
+
+    <h1 class="timer"></h1>
+
+
+    <ul>
+        <li class="active" data-color="red">red</li>
+        <li data-color="green">gren</li>
+        <li data-color="blue">blue</li>
+        <li data-color="yellow">yellow</li>
+    </ul>
+
+    <div class="test"></div>
+
+    <b><hr></b>
+
+    <form>
+        <input type="text" value="">
+        <button class="btn">Submit</button>
+    </form>
+    <br><br><br><hr>
+
+    <div class="form">
+        <input type="text" name="text" id="text">
+        <input type="submit" value="Add">
+    </div>
+    <div class="content">
+
+    </div>
+
+
+    <!-- <hr>
+
+    <ul class="ul">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>1</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <span id="s1">id My Span 1</span>
+    <span>My Span 2</span>
+
+    <p class="p">class p 1</p>
+    <p class="p">class p 2</p>
+
+    <h1>My Headeer</h1>
+    <form>
+        <input type="text" value="">
+    </form>
+    <form>
+        <input type="text" value="">
+    </form>
+
+
+    <br><br><hr>
+    <!-- <ul>
+        <li class="active">One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+
+    <div class="content">
+        <div>Dive One</div>
+        <div>Dive Two</div>
+        <div>Dive Three</div>
+    </div> -->
+
+
+
+    
+
+    
+    <!-- <div id="app">
+        <form>
+            <input type="checkbox" id="myCheck" v-on:click="myFunction">
+        </form>
+        <button id="d_all" style="display: none;">Delete All</button>
+        <ul>
+
+            <li>
+                name:
+                <ul>
+                    <li v-for="(a , index) in api">{{ index }} => {{ a.name }}</li>
+                </ul>
+            </li>
+
+            <li>
+                Address:
+                <ul>
+                    <li v-for="a in api">{{ a.address }}</li>
+                </ul>
+            </li>
+        </ul>
+
+
+        <br><br>
+    <div v-for="(item , index) in obj">{{ index }} => {{ item }}</div>
+
+        <br><br>
+
+   <select v-model="select">
+       <option disabled value="">please select one of them</option>
+       <option>A</option>
+       <option>B</option>
+       <option>C</option>
+   </select>
+
+   <h1>You Select :{{ select }}</h1>
+
+    </div> -->
+
+    <hr>
+    
+    <div class="parent">
+        <div class="c1">
+            <input type="text" class="text">
+            <input type="button" value="add">
+        </div>
+        <div class="info"></div>
+    </div>
+
+    <!-- <div id="demo"></div> -->
+    <!-- <div id="dem"></div>  -->
+
+    <script>
+        let btn = document.querySelector("input[type='button']");
+
+        btn.onclick = function AddTask(){
+            let text = document.querySelector(".text").value,
+            d = document.querySelector('.info'),
+            h1 = document.createElement("h1");
+            h1.textContent = text
+            h1.style.cssText = "border-bottom:1px solid #aaa;color:white"
+            d.appendChild(h1)
+
+        }
+    </script>
+<script src="javascript.js"></script>    
+</body>
+</html>

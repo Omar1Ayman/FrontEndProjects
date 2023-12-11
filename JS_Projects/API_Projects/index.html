@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+    <title>API PROJECTS</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">api projects</div>
+            <nav>
+                <ul>
+                    <li class="active" data-cont="LoginForm">LoginForm</li>
+                    <li data-cont="WeatherApp">WeatherApp</li>
+                    <li data-cont="calculator">calculator</li>
+                    <li data-cont="ImageSlider">Image Slider</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+
+            <section class="LoginForm">
+                <form action="">
+                    <h1 class="title">Login Form</h1>
+                    <div class="group">
+                        <input required type="email"  name="email" id="email" placeholder="Email or Username">
+                    </div>
+                    <div class="group">
+                        <input required type="password" name="password" id="password" placeholder="Password">
+                        <i class="show-hide fa-solid fa-lock"></i>
+                    </div>
+                    
+                    <button class="btn">LOGIN</button>
+                </form>
+                <span class="data">Or login with</span>
+                <div class="links">
+                    <button class="face"><i class="fa-brands fa-facebook"></i> Facebook</button>
+                    <button class="goog"><i class="fa-brands fa-google"></i> Google</button>
+                </div>
+                <div class="footer">
+                    <b>Not a member?</b><a href="#"> Signup now</a>
+                </div>
+            </section>
+
+
+            <section class="WeatherApp">
+                <div class="wrapper">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="container">
+                      <div class="search-container">
+                        <input
+                          type="text"
+                          placeholder="Enter a city name"
+                          id="city"
+                          value="mumbai"
+                        />
+                        <button id="search-btn">Search</button>
+                      </div>
+                      <div id="result"></div>
+                    </div>
+                  </div>
+            </section>  
+            <section class="calculator">
+                <input type="text" name="" disabled class="screen">
+                    <div class="container">
+                        <div class="side square" onclick="btnClick(this)">**</div>
+                        <div class="side clean" onclick="cleaninput()">C</div>
+                        <div class="side del" onclick="del()">x</div>
+                        <div class="side" onclick="btnClick(this)">/</div>
+                        <div onclick="btnClick(this)">7</div>
+                        <div onclick="btnClick(this)">8</div>
+                        <div onclick="btnClick(this)">9</div>
+                        <div class="side" onclick="btnClick(this)">*</div>
+                        <div onclick="btnClick(this)">4</div>
+                        <div onclick="btnClick(this)">5</div>
+                        <div onclick="btnClick(this)">6</div>
+                        <div  class="side" onclick="btnClick(this)">-</div>
+                        <div onclick="btnClick(this)">1</div>
+                        <div onclick="btnClick(this)">2</div>
+                        <div onclick="btnClick(this)">3</div>
+                        <div  class="side" onclick="btnClick(this)">+</div>
+                        <div onclick="neg_pos()">+/-</div>
+                        <div onclick="btnClick(this)">0</div>
+                        <div onclick="btnClick(this)">.</div>
+                        <div  class="side" class="equal" onclick="Calc()">=</div>
+                    </div>
+            </section>
+
+            <section class="ImageSlider">
+                <div class="container">
+                    <div class="img-container">
+                        <img class="active" src="images/img1.jpeg" alt="">
+                        <img src="images/img2.jpg" alt="">
+                        <img src="images/img3.jpg" alt="">
+                        <img src="images/img4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="dot-container">
+                    <div class="right"  onclick="plusSlides(1)">&gt;</div>
+                    <div class="left"  onclick="plusSlides(-1)">&lt;</div>
+                </div>
+                <div class="dot-container2">
+                    <div class="active" onclick="currentSlide(1)"></div>
+                    <div onclick="currentSlide(2)"></div>
+                    <div onclick="currentSlide(3)"></div>
+                    <div onclick="currentSlide(4)"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

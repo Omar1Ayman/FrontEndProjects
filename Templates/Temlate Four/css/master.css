@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+/* -----------------Page--------------- */
+
+.page{
+    height: 100%;
+    background-color: #f1f2f9;
+}
+/* -----------------Page--------------- */
+
+/* -----------------AsideBar--------------- */
+.content {
+    width: 100%;
+    height: 100%;
+}
+.aside{
+    box-shadow: 0 0 10px rgba(0,0, 0,.2);
+    min-width: fit-content;
+    z-index: 1;
+    height: 1000px;
+
+}
+
+.heading-title{
+    font-family: cursive;
+}
+.heading-title::before{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    width: 90%;
+    height: 1.5px;
+    background-color: #000;
+    border-radius: 10px;
+}
+.heading-title::after{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, 43%);
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+.links{
+    margin-top: 50px;
+}
+
+.links a{
+    width: 100%;
+    display: flex;
+    padding: 10px 30px 10px 5px;
+    border-radius: 5px;
+    margin: 2px 0;
+    color: #332;
+    transition: all .5s;
+    font-size: 15px;
+}
+.links a span{
+    padding-left: 10px;
+}
+
+
+.links a.active ,
+.links a:hover
+{
+    background-color: #f1f2f9;
+}
+
+@media (max-width:720px){
+    
+    .aside{
+       padding: 0;
+       width: 62px;
+    }
+    .logo::after,
+    .logo::before , .logo{
+        display: none;
+    }
+    .logo1{
+        display: block;
+        font-weight: bold;
+        font-family:cursive;
+    }
+    .links{
+        text-align: center;
+    }
+    .links li{
+        padding: 0;
+    }
+    .links a{
+       font-size: 30px;
+        display: block;
+        padding: 10px 20px;
+        
+    }
+
+    .links a span{
+        display: none;
+    }
+}
+
+
+/* -----------------AsideBar--------------- */
+
+
+/* -----------------Header--------------- */
+header{
+    width: 100%;
+    /* background-color: #f1f2f9; */
+    box-shadow: 0 0 10px rgba(0,0, 0,.2);
+
+}
+header .search{
+    width: 50%;
+}
+header .search input{
+    padding: 10px 35px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0, 0,.2);
+    outline: none;
+    transition: all .5s ease-in-out;
+    width: 30%;
+}
+header .search input:focus{
+       width: 100%;
+}
+header .search .icon-search{
+    top: 50%;
+    left: 20px;
+    transition: tr;
+    transform: translate(-50% , -50%);
+    color: #5559;
+}
+
+header .navigation{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+header .navigation img {
+    background-color: #fff;
+    width: 35px;
+    height: 35px;
+    margin-left: 15px ;
+}
+
+/* -----------------Header--------------- */
+
+/* -----------------Container--------------- */
+
+.title{
+    width: fit-content;
+    }
+
+.title::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 3px;
+    background-color: #fff;
+    left: 0;
+
+}
+.title::before{
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    background-color: #333;
+    bottom: 0;
+    left: 0 ;
+    z-index: 1;
+    transition: .5s;
+}
+.title:hover::before{
+    width: 80%;
+}
+.row{
+    grid-template-columns: repeat(auto-fill , minmax(350px,1fr));
+    
+}
+@media (max-width:720px){
+    .row{
+        grid-template-columns: minmax(200px ,1fr);
+        gap:10px;
+
+    }
+}
+.card{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0, 0,.2);
+}
+
+
+/* -----------------Container--------------- */
+
+/* -----------------Welcome Wiget--------------- */
+.welcome img{
+    width: 170px;
+}
+
+.welcome .intro .user-avatar{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: -25px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+@media (max-width:720px){
+.welcome .intro .user-avatar{
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.welcome .body > div{
+    margin: 15px 0;
+
+}
+}
+.welcome .body {
+    margin: 50px 0;
+    border-bottom: 1px solid #3333;
+    border-top: 1px solid #3333;
+    
+}
+
+.welcome .visit{
+    margin: 10px 10px 10px auto;
+    padding: 5px 10px;
+    box-shadow: 0 0 7px rgba(0, 0 ,255,.5);
+}
+/* -----------------Welcome Wiget--------------- */
+
+/* -----------------Draft Wiget--------------- */
+.draft .body form input , textarea{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #eee;
+    resize: none;
+}
+.draft .body button{
+    background-color: blueviolet;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    border:none;
+    margin-right: 10px;
+    display: block;
+    width: fit-content;
+    margin: 10px 10px 10px auto;
+    padding: 5px 10px;
+    box-shadow: 0 0 7px rgba(0, 0 ,255,.5);
+}
+/* -----------------Draft Wiget--------------- */
+
+/* -----------------Targets Wiget--------------- */
+.target .child{
+    margin: 50px;
+    border-bottom: 20px solid #333;
+}
+.targets .details{
+    flex: 1;
+    margin: 0 10px;
+}
+/* -----------------Targets Wiget--------------- */
